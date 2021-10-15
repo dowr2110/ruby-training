@@ -38,7 +38,7 @@ def save_to_csv(products)
 end
 
 def parse_by_url(count_of_pages, url)
-  for i in 1..count_of_pages
+  (1..count_of_pages).each do |i|
     doc = get_doc(url + "?p=#{i}")
     count_of_products = 0
     doc.xpath('//div[@class = "product-container"]').each do |row|

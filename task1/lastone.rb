@@ -3,65 +3,65 @@ require 'curb'
 require 'csv'
 
 puts "введите ссылка на страницу категории: "
-url=gets.chomp
-convertedToUrl=URI.parse(url)
+url = gets.chomp
 puts "введите имя файла в который будет записан результат: "
-$filename=gets
-$http=Curl.get(convertedToUrl)
-$doc = Nokogiri::HTML($http.body)
+@filename = gets
 
-def parsing(url)
-  convertedToUrl=URI.parse(url)
-  http=Curl.get(convertedToUrl)
+def get_doc(url)
+  convert_to_url = URI.parse(url)
+  http = Curl.get(convert_to_url)
   doc = Nokogiri::HTML(http.body)
-  products=[]
+  return doc
+end
+
+def parse_product(url)
+  doc = get_doc(url)
+  products = []
   doc.xpath('//*[@class = "attribute_radio_list pundaline-variations"]/*' ).each do |row|
-    itemPrice = row.search('span.price_comb').text.strip
-    itemImage=row.at_xpath('//img[@id="bigpic"]/@src').text.strip
-    itemNameAndWeight=row.at_xpath('//h1[@class="product_main_name"]').text.strip + "\n" + row.search('span.radio_label').text.strip
-    products.push(
-      name:itemNameAndWeight, price:itemPrice, image:itemImage
-    )
+    product_price = row.search('span.price_comb').text.strip
+    product_image = row.at_xpath('//img[@id="bigpic"]/@src').text.strip
+    product_full_name = row.at_xpath('//h1[@class="product_main_name"]').text.strip + "\n" + row.search('span.radio_label').text.strip
+    products.push( name: product_full_name, price: product_price, image: product_image )
   end
   return products
 end
 
-def recordToCsv(products)
-  column_header=["Name","Price","Image"]
-  CSV.open($filename,"a+" ,force_quotes:true ) do |wr|
-    wr<<column_header if wr.count.eql? 0
-    products.each do |i|
-      wr<<i.values
-      puts i.to_s
+def save_to_csv(products)
+  column_header = [ "Name", "Price", "Image" ]
+  CSV.open(@filename,"a+" ,force_quotes:true ) do |file|
+    file << column_header if file.count.eql? 0
+    products.each do |product|
+      file << product.values
+      puts product.to_s
     end
   end
 end
 
-def getAllUrls(countOfAllProducts,url)
-  for i in 1..countOfAllProducts
-    http=Curl.get(url+"?p=#{i}")
-    doc = Nokogiri::HTML(http.body)
-    num=0
+def parse_by_url(count_of_pages, url)
+  for i in 1..count_of_pages
+    doc = get_doc(url + "?p=#{i}")
+    count_of_products = 0
     doc.xpath('//div[@class = "product-container"]').each do |row|
-      num+=1
+      count_of_products += 1
     end
-    products=[]
-    allUrls=doc.xpath('//div[@class=\'product-desc display_sd\']/a/@href').first(num)
-    allUrls.each do |i|
-      products+=parsing(i.text)
+    products = []
+    all_urls = doc.xpath("//div[@class='product-desc display_sd']/a/@href").first(count_of_products)
+    all_urls.each do |url|
+      products += parse_product(url.text)
     end
-    recordToCsv(products)
+    save_to_csv(products)
   end
 end
 
-def finalMethod(url)
+def get_all_pages(url)
   puts "идет запись на файл..."
-  n=$doc.xpath("//ul[contains(@class, 'pagination')]/li[position() = (last() - 1)]/a/span/text()").text.to_i
-  getAllUrls(n,url)
+  doc = get_doc(url)
+  count_of_pages = doc.xpath("//ul[contains(@class, 'pagination')]/li[position() = (last() - 1)]/a/span/text()").text.to_i
+  parse_by_url(count_of_pages, url)
   puts "записано!!"
 end
 
-finalMethod(convertedToUrl)
+get_all_pages(url)
 
 
 

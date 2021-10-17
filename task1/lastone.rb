@@ -11,7 +11,6 @@ def get_doc(url)
   convert_to_url = URI.parse(url)
   http = Curl.get(convert_to_url)
   doc = Nokogiri::HTML(http.body)
-  return doc
 end
 
 def parse_product(url)
@@ -23,7 +22,7 @@ def parse_product(url)
     product_full_name = row.at_xpath('//h1[@class="product_main_name"]').text.strip + "\n" + row.search('span.radio_label').text.strip
     products.push( name: product_full_name, price: product_price, image: product_image )
   end
-  return products
+  products
 end
 
 def save_to_csv(products)
@@ -37,19 +36,30 @@ def save_to_csv(products)
   end
 end
 
+def count_products_in_one_page(doc)
+  count_of_products = 0
+  doc.xpath('//div[@class = "product-container"]').each do |row|
+    count_of_products += 1
+  end
+  count_of_products
+end
+
+def get_and_save_products(doc)
+  count_of_products = count_products_in_one_page(doc)
+  products = []
+  all_urls = doc.xpath("//div[@class='product-desc display_sd']/a/@href").first(count_of_products)
+  all_urls.each do |url|
+    products += parse_product(url.text)
+  end
+  save_to_csv(products)
+end
+
 def parse_by_url(count_of_pages, url)
-  (1..count_of_pages).each do |i|
+  doc = get_doc(url)
+  get_and_save_products(doc) #for first page
+  (2..count_of_pages).each do |i| #for another pages
     doc = get_doc(url + "?p=#{i}")
-    count_of_products = 0
-    doc.xpath('//div[@class = "product-container"]').each do |row|
-      count_of_products += 1
-    end
-    products = []
-    all_urls = doc.xpath("//div[@class='product-desc display_sd']/a/@href").first(count_of_products)
-    all_urls.each do |url|
-      products += parse_product(url.text)
-    end
-    save_to_csv(products)
+    get_and_save_products(doc)
   end
 end
 
@@ -62,6 +72,3 @@ def get_all_pages(url)
 end
 
 get_all_pages(url)
-
-
-

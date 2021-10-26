@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>companies</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+ 
+<h2>Companies</h2>
+<div class="companies"></div> 
+ <br><br> 
+ <form method="post" action="#">
+        <label for="company_name">company name :</label>
+        <input name="company_name" id="company_name" type="text" /> 
+        <input type="button" value="add" onclick="Add(this.form.company_name)"/>
+  </form>
+  <br><br>
+   <form method="delete" action="#">
+        <label for="id">id :</label>
+        <input name="id" id="id" type="number" />
+        <input type="button" value="delete by id" onclick="Delete(this.form.id)"/>
+  </form>
+   <br><br>
+   <form method="patch" action="#">
+   	 	<label for="id">id :</label>
+        <input name="id" id="id" type="number" />
+        <label for="company_name">company name :</label>
+        <input name="company_name" id="company_name" type="text" /> 
+        <input type="button" value="update by id" onclick="Update(this.form.id, this.form.company_name)"/> 
+  </form>
+   <br><br> 
+<a href="main.html">Back to main</a>
+
+<script type="text/javascript">
+	function Start(){
+    const requesturlCompanies='http://localhost:3000/companies';
+	 const xhr4 = new XMLHttpRequest();
+    xhr4.open("GET", requesturlCompanies);
+
+    xhr4.onload = () =>  {
+    const data = JSON.parse(xhr4.response);
+
+    document.querySelector('.companies').innerHTML = `<table class="content" border="2"></table>`
+    let head = document.createElement('thead')
+    head.innerHTML = `
+       <thead>
+            <tr>
+                <th>ID</th> <th>COMPANY NAME</th>
+            </tr>
+        </thead>`
+    document.querySelector('.content').appendChild(head) 
+        for(company in data){
+            let row = document.createElement('tr')
+            row.innerHTML = `
+            <td>${data[company].id}</td>
+            <td>${data[company].company_name}</td>`
+            document.querySelector('.content').appendChild(row) 
+        } 
+    };
+    xhr4.send();
+ } 
+
+    function Add(x){
+		var req = new XMLHttpRequest(); 
+   
+          req.open("POST","http://localhost:3000/companies"+`?company_name=${x.value}` , true);
+          req.onload = () =>  {
+																 Start();
+															};
+    
+          req.send('null'); 
+     
+   };
+
+     function Delete(x){
+					var req = new XMLHttpRequest(); 
+   
+          req.open("DELETE","http://localhost:3000/companies"+`/${x.value}` , true);
+          req.onload = () =>  {
+																 Start();
+															};
+    
+          req.send('null'); 
+     
+   	};
+
+
+     function Update(id, x){
+		var req = new XMLHttpRequest(); 
+   
+          req.open("PATCH","http://localhost:3000/companies"+`/${id.value}?company_name=${x.value}` , true);
+          req.onload = () =>  {
+																 Start();
+															};
+    
+          req.send('null'); 
+     
+   };
+</script>
+	<script type="text/javascript">
+		Start();
+	</script>
+</body>
+</html>

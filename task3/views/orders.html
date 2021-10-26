@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>orders</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+<h2>Orders</h2>
+<div class="orders"></div> 
+ <br><br> 
+ <form method="post" action="#">
+        <label for="phone_id">phone id :</label>
+        <input name="phone_id" id="phone_id" type="number" />
+        <label for="user_id">user id :</label>
+        <input name="user_id" id="user_id" type="number" />
+        <label for="count">count :</label>
+        <input name="count" id="count" type="number" />
+        <label for="date">date :</label>
+        <input name="date" id="date" type="text" />
+        <input type="button" value="add" onclick="Add(this.form.phone_id, this.form.user_id, this.form.count, this.form.date)"/>
+  </form>
+  <br><br>
+   <form method="delete" action="#">
+        <label for="id">id :</label>
+        <input name="id" id="id" type="number" />
+        <input type="button" value="delete by id" onclick="Delete(this.form.id)"/>
+  </form>
+   <br><br>
+   <form method="patch" action="#">
+   	 		<label for="id">id :</label>
+        <input name="id" id="id" type="number" />
+        <label for="phone_id">phone id :</label>
+        <input name="phone_id" id="phone_id" type="number" />
+        <label for="user_id">user id :</label>
+        <input name="user_id" id="user_id" type="number" />
+        <label for="count">count :</label>
+        <input name="count" id="count" type="number" />
+        <label for="date">date :</label>
+        <input name="date" id="date" type="text" />
+        <input type="button" value="update by id" onclick="Update(this.form.id, this.form.phone_id, this.form.user_id, this.form.count, this.form.date)"/>
+  </form>
+   <br><br> 
+<a href="main.html">Back to main</a>
+
+<script type="text/javascript">
+	function Start(){
+	const requesturlOrders='http://localhost:3000/orders'; 
+	const xhr = new XMLHttpRequest();
+	 
+    xhr.open("GET", requesturlOrders); 
+    xhr.onload = () =>  {
+    const data = JSON.parse(xhr.response); 
+    document.querySelector('.orders').innerHTML = `<table class="content" border="2"></table>`
+		let head = document.createElement('thead')
+		head.innerHTML = `
+		   <thead>
+		        <tr>
+		            <th>ID</th> <th>PHONE ID</th> <th>USER ID</th><th>COUNT</th><th>DATE</th><th>SUM</th>
+		        </tr>
+		    </thead>`
+    document.querySelector('.content').appendChild(head) 
+     	for(order in data){
+	   		let row = document.createElement('tr')
+	    	row.innerHTML = `
+	    	<td>${data[order].id}</td>
+	    	<td>${data[order].phone_id}</td>
+	    	<td>${data[order].user_id}</td>
+	    	<td>${data[order].count}</td>
+	    	<td>${data[order].date}</td>
+	    	<td>${data[order].sum}$</td>`
+	    	document.querySelector('.content').appendChild(row) 
+    	} 
+   	};
+    xhr.send();  
+ } 
+
+    function Add(x, y, z, e){
+		var req = new XMLHttpRequest(); 
+   
+          req.open("POST","http://localhost:3000/orders"+`?phone_id=${x.value}&user_id=${y.value}&count=${z.value}&date=${e.value}` , true);
+          req.onload = () =>  {
+																 Start();
+															};
+    
+          req.send('null'); 
+     
+   };
+
+     function Delete(x){
+					var req = new XMLHttpRequest(); 
+   
+          req.open("DELETE","http://localhost:3000/orders"+`/${x.value}` , true);
+          req.onload = () =>  {
+																 Start();
+															};
+    
+          req.send('null'); 
+     
+   	};
+
+
+     function Update(id, x, y, z, e){
+		var req = new XMLHttpRequest(); 
+   
+          req.open("PATCH","http://localhost:3000/orders"+`/${id.value}?phone_id=${x.value}&user_id=${y.value}&count=${z.value}&date=${e.value}` , true);
+          req.onload = () =>  {
+																 Start();
+															};
+    
+          req.send('null'); 
+     
+   };
+</script>
+	<script type="text/javascript">
+		Start();
+	</script>
+</body>
+</html>

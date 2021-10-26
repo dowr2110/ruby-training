@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>providers</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2>Providers</h2>
+<div class="providers"></div> 
+ <br><br> 
+ <form method="post" action="#">
+        <label for="provider_name">provider name :</label>
+        <input name="provider_name" id="provider_name" type="text" />
+        <label for="phone_number">phone number :</label>
+        <input name="phone_number" id="phone_number" type="text" /> 
+        <input type="button" value="add" onclick="Add(this.form.provider_name, this.form.phone_number)"/>
+  </form>
+  <br><br>
+   <form method="delete" action="#">
+        <label for="id">id :</label>
+        <input name="id" id="id" type="number" />
+        <input type="button" value="delete by id" onclick="Delete(this.form.id)"/>
+  </form>
+   <br><br>
+   <form method="patch" action="#">
+        <label for="id">id :</label>
+        <input name="id" id="id" type="number" />
+        <label for="provider_name">provider name :</label>
+        <input name="provider_name" id="provider_name" type="text" />
+        <label for="phone_number">phone number :</label>
+        <input name="phone_number" id="phone_number" type="text" /> 
+        <input type="button" value="update by id" onclick="Update(this.form.id, this.form.provider_name, this.form.phone_number)"/> 
+  </form>
+   <br><br> 
+<a href="main.html">Back to main</a>
+
+<script type="text/javascript">
+    function Start(){
+    const requesturlProviders='http://localhost:3000/providers';
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requesturlProviders);
+
+    xhr.onload = () =>  {
+    const data = JSON.parse(xhr.response);
+
+    document.querySelector('.providers').innerHTML = `<table class="content" border="2"></table>`
+    let head = document.createElement('thead')
+    head.innerHTML = `
+       <thead>
+            <tr>
+                <th>ID</th> <th>PROVIDER NAME</th> <th>PHONE NUMBER</th>
+            </tr>
+        </thead>`
+    document.querySelector('.content').appendChild(head) 
+        for(provider in data){
+            let row = document.createElement('tr')
+            row.innerHTML = `
+            <td>${data[provider].id}</td>
+            <td>${data[provider].provider_name}</td>
+            <td>${data[provider].phone_number}</td>
+             `
+            document.querySelector('.content').appendChild(row) 
+        } 
+    };
+    xhr.send(); 
+ } 
+
+    function Add(x, y){
+        var req = new XMLHttpRequest(); 
+   
+          req.open("POST","http://localhost:3000/providers"+`?provider_name=${x.value}&phone_number=${y.value}` , true);
+          req.onload = () =>  {
+                                                                 Start();
+                                                            };
+    
+          req.send('null'); 
+     
+   };
+
+     function Delete(x){
+                    var req = new XMLHttpRequest(); 
+   
+          req.open("DELETE","http://localhost:3000/providers"+`/${x.value}` , true);
+          req.onload = () =>  {
+                                                                 Start();
+                                                            };
+    
+          req.send('null'); 
+     
+    };
+
+
+     function Update(id, x, y){
+        var req = new XMLHttpRequest(); 
+   
+          req.open("PATCH","http://localhost:3000/providers"+`/${id.value}?provider_name=${x.value}&phone_number=${y.value}` , true);
+          req.onload = () =>  {
+                                                                 Start();
+                                                            };
+    
+          req.send('null'); 
+     
+   };
+</script>
+    <script type="text/javascript">
+        Start();
+    </script>
+</body>
+</html>

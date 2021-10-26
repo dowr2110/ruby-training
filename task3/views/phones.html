@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>phones</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+<h2>Phones</h2>
+<div class="phones"></div> 
+ <br><br> 
+ <form method="post" action="#">
+        <label for="phone_name">phone name :</label>
+        <input name="phone_name" id="phone_name" type="text" />
+        <label for="price">price :</label>
+        <input name="price" id="price" type="number" />
+        <label for="provider_id">provider id :</label>
+        <input name="provider_id" id="provider_id" type="number" />
+        <label for="company_id">company id :</label>
+        <input name="company_id" id="company_id" type="number" />
+        <input type="button" value="add" onclick="Add(this.form.phone_name, this.form.price, this.form.provider_id, this.form.company_id)"/>
+  </form>
+  <br><br>
+   <form method="delete" action="#">
+        <label for="id">id :</label>
+        <input name="id" id="id" type="number" />
+        <input type="button" value="delete by id" onclick="Delete(this.form.id)"/>
+  </form>
+   <br><br>
+   <form method="patch" action="#">
+   	 	<label for="id">id :</label>
+        <input name="id" id="id" type="number" />
+        <label for="phone_name">phone name :</label>
+        <input name="phone_name" id="phone_name" type="text" />
+        <label for="price">price :</label>
+        <input name="price" id="price" type="number" />
+        <label for="provider_id">provider id :</label>
+        <input name="provider_id" id="provider_id" type="number" />
+        <label for="company_id">company id :</label>
+        <input name="company_id" id="company_id" type="number" />
+        <input type="button" value="update by id" onclick="Update(this.form.id, this.form.phone_name, this.form.price, this.form.provider_id, this.form.company_id)"/> 
+  </form>
+   <br><br> 
+<a href="main.html">Back to main</a>
+
+<script type="text/javascript">
+	function Start(){
+    const requesturlPhones='http://localhost:3000/phones';
+	const xhr = new XMLHttpRequest();
+    xhr.open("GET", requesturlPhones);
+
+    xhr.onload = () =>  {
+    const data = JSON.parse(xhr.response);
+
+    document.querySelector('.phones').innerHTML = `<table class="content" border="2"></table>`
+    let head = document.createElement('thead')
+    head.innerHTML = `
+       <thead>
+            <tr>
+                <th>ID</th> <th>PHONE NAME</th> <th>PRICE</th><th>PROVIDER ID</th><th>COMPANY ID</th>
+            </tr>
+        </thead>`
+    document.querySelector('.content').appendChild(head) 
+        for(phone in data){
+            let row = document.createElement('tr')
+            row.innerHTML = `
+            <td>${data[phone].id}</td>
+            <td>${data[phone].phone_name}</td>
+            <td>${data[phone].price}$</td>
+            <td>${data[phone].provider_id}</td>
+            <td>${data[phone].company_id}</td>
+             `
+            document.querySelector('.content').appendChild(row) 
+        } 
+    };
+    xhr.send();
+ } 
+
+    function Add(x, y, z, e){
+		var req = new XMLHttpRequest(); 
+   
+          req.open("POST","http://localhost:3000/phones"+`?phone_name=${x.value}&price=${y.value}&provider_id=${z.value}&company_id=${e.value}` , true);
+          req.onload = () =>  {
+																 Start();
+															};
+    
+          req.send('null'); 
+     
+   };
+
+     function Delete(x){
+					var req = new XMLHttpRequest(); 
+   
+          req.open("DELETE","http://localhost:3000/phones"+`/${x.value}` , true);
+          req.onload = () =>  {
+																 Start();
+															};
+    
+          req.send('null'); 
+     
+   	};
+
+
+     function Update(id, x, y, z, e){
+		var req = new XMLHttpRequest(); 
+   
+          req.open("PATCH","http://localhost:3000/phones"+`/${id.value}?phone_name=${x.value}&price=${y.value}&provider_id=${z.value}&company_id=${e.value}` , true);
+          req.onload = () =>  {
+																 Start();
+															};
+    
+          req.send('null'); 
+     
+   };
+</script>
+	<script type="text/javascript">
+		Start();
+	</script>
+</body>
+</html>

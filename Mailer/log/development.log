@@ -1,0 +1,1043 @@
+Started POST "/users?name=dowr&email=dowr.atayew@mail.ru&login=dowr2110" for 127.0.0.1 at 2021-11-16 18:19:05 +0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: Mailer_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `public_send'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:687:in `checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:666:in `try_to_checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:627:in `acquire_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:328:in `checkout'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:168:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:309:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:265:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users?name=dowr1&email=dowr.atayew@mail.ru&login=dowr2110" for 127.0.0.1 at 2021-11-16 18:22:04 +0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: Mailer_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `public_send'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:687:in `checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:666:in `try_to_checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:627:in `acquire_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:328:in `checkout'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:168:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:309:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:265:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2021-11-16 18:39:33 +0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: Mailer_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `public_send'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:687:in `checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:666:in `try_to_checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:627:in `acquire_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:328:in `checkout'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:168:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:309:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:265:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2021-11-16 18:40:04 +0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: Mailer_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `public_send'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:687:in `checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:666:in `try_to_checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:627:in `acquire_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:328:in `checkout'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:168:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:309:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:265:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users?name=dowr1&email=dowr.atayew@mail.ru&login=dowr2110" for 127.0.0.1 at 2021-11-16 18:46:23 +0300
+  
+ActiveRecord::NoDatabaseError (We could not find your database: Mailer_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
+):
+  
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `public_send'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:643:in `new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:687:in `checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:666:in `try_to_checkout_new_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:627:in `acquire_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:328:in `checkout'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_pool.rb:168:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:309:in `retrieve_connection'
+activerecord (7.0.0.alpha2) lib/active_record/connection_handling.rb:265:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (213.8ms)[0m  [1m[35mCREATE DATABASE "Mailer_development" ENCODING = 'unicode'[0m
+  [1m[35m (107.9ms)[0m  [1m[35mCREATE DATABASE "Mailer_test" ENCODING = 'unicode'[0m
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(513540446563869585)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20211116141644)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "login" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211116141644"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-16 15:48:23.388551"], ["updated_at", "2021-11-16 15:48:23.388551"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(513540446563869585)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users?name=dowr1&email=dowr.atayew@mail.ru&login=dowr2110" for 127.0.0.1 at 2021-11-16 18:49:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"dowr1", "email"=>"dowr.atayew@mail.ru", "login"=>"dowr2110"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 486)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:233:in `handle_unverified_request'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:266:in `handle_unverified_request'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:255:in `verify_authenticity_token'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:415:in `block in make_lambda'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `block in invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `each'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:220:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:65:in `block in process_action'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `block in instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `instrument'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:64:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+activerecord (7.0.0.alpha2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.0.alpha2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.0.alpha2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:845:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users?name=dowr1&email=dowr.atayew@mail.ru&login=dowr2110" for 127.0.0.1 at 2021-11-16 18:55:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"dowr1", "email"=>"dowr.atayew@mail.ru", "login"=>"dowr2110"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", nil], ["email", nil], ["login", nil], ["created_at", "2021-11-16 15:55:16.441381"], ["updated_at", "2021-11-16 15:55:16.441381"]]
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: b18d5576-e67d-455e-85b2-5b280193b783) to Async(default) with arguments: "UserMailer", "welcome_email", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007ff23505ce48 @uri=#<URI::GID gid://mailer/User/1>>}, :args=>[]}
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 51ms (ActiveRecord: 6.6ms | Allocations: 41641)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783] Performing ActionMailer::MailDeliveryJob (Job ID: b18d5576-e67d-455e-85b2-5b280193b783) from Async(default) enqueued at 2021-11-16T15:55:16Z with arguments: "UserMailer", "welcome_email", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007ff200069bc8 @uri=#<URI::GID gid://mailer/User/1>>}, :args=>[]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 1.9ms | Allocations: 2784)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783]   Rendered layout layouts/mailer.html.erb (Duration: 3.1ms | Allocations: 3846)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783]   Rendering layout layouts/mailer.text.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783]   Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783]   Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 175)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783]   Rendered layout layouts/mailer.text.erb (Duration: 0.8ms | Allocations: 405)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783] UserMailer#welcome_email: processed outbound mail in 11.2ms
+Started GET "/users/1" for 127.0.0.1 at 2021-11-16 18:55:16 +0300
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783] Delivered mail 6193d4647bfa6_34755c94887cb@dowr-ZenBook-UX481FL-UX481FL.mail (6.8ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783] Date: Tue, 16 Nov 2021 18:55:16 +0300
+From: notifications@example.com
+Message-ID: <6193d4647bfa6_34755c94887cb@dowr-ZenBook-UX481FL-UX481FL.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6193d4647aff9_34755c94886d2";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6193d4647aff9_34755c94886d2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, 
+===============================================
+
+You have successfully signed up to example.com,
+your username is: .
+
+To login to the site, just follow this link: http://example.com/login.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_6193d4647aff9_34755c94886d2
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Welcome to example.com, </h1>
+<p>
+  You have successfully signed up to example.com,
+  your username is: .<br>
+</p>
+<p>
+  To login to the site, just follow this link: http://example.com/login.
+</p>
+<p>Thanks for joining and have a great day!</p>
+</body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_6193d4647aff9_34755c94886d2--
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b18d5576-e67d-455e-85b2-5b280193b783] Performed ActionMailer::MailDeliveryJob (Job ID: b18d5576-e67d-455e-85b2-5b280193b783) from Async(default) in 28.5ms
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2195)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2260)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3030)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= render @user %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this user", edit_user_path(@user) %> |
+  
+app/views/users/show.html.erb:3
+Started GET "/users" for 127.0.0.1 at 2021-11-16 18:58:34 +0300
+Processing by UsersController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1260)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1325)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1568)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    3: <h1>User</h1>
+    4: 
+    5: <div id="users">
+    6:   <%= render @users %>
+    7: </div>
+    8: 
+    9: <%= link_to "New user", new_user_path %>
+  
+app/views/users/index.html.erb:6
+Started GET "/users/1" for 127.0.0.1 at 2021-11-16 18:59:10 +0300
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1164)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1407)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= render @user %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this user", edit_user_path(@user) %> |
+  
+app/views/users/show.html.erb:3
+Started GET "/users?name=dowr2&email=dowr.atayew@mail.ru&login=dowr2111" for 127.0.0.1 at 2021-11-16 19:06:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  Parameters: {"name"=>"dowr2", "email"=>"dowr.atayew@mail.ru", "login"=>"dowr2111"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2320)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2389)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 6188)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    3: <h1>User</h1>
+    4: 
+    5: <div id="users">
+    6:   <%= render @users %>
+    7: </div>
+    8: 
+    9: <%= link_to "New user", new_user_path %>
+  
+app/views/users/index.html.erb:6
+Started POST "/users?name=dowr2&email=dowr.atayew@mail.ru&login=dowr2111" for 127.0.0.1 at 2021-11-16 19:08:02 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"dowr2", "email"=>"dowr.atayew@mail.ru", "login"=>"dowr2111"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", nil], ["email", nil], ["login", nil], ["created_at", "2021-11-16 16:08:02.932357"], ["updated_at", "2021-11-16 16:08:02.932357"]]
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.3ms | Allocations: 183)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.0ms | Allocations: 393)
+  Rendering layout layouts/mailer.text.erb
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.2ms | Allocations: 161)
+  Rendered layout layouts/mailer.text.erb (Duration: 0.5ms | Allocations: 337)
+UserMailer#welcome_email: processed outbound mail in 5.4ms
+Delivered mail 6193d762ec49e_367f37dc-3d0@dowr-ZenBook-UX481FL-UX481FL.mail (3.4ms)
+Date: Tue, 16 Nov 2021 19:08:02 +0300
+From: notifications@example.com
+Message-ID: <6193d762ec49e_367f37dc-3d0@dowr-ZenBook-UX481FL-UX481FL.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6193d762eba23_367f37dc-45c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6193d762eba23_367f37dc-45c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, 
+===============================================
+
+You have successfully signed up to example.com,
+your username is: .
+
+To login to the site, just follow this link: http://example.com/login.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_6193d762eba23_367f37dc-45c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Welcome to example.com, </h1>
+<p>
+  You have successfully signed up to example.com,
+  your username is: .<br>
+</p>
+<p>
+  To login to the site, just follow this link: http://example.com/login.
+</p>
+<p>Thanks for joining and have a great day!</p>
+</body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_6193d762eba23_367f37dc-45c--
+
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 47ms (ActiveRecord: 9.8ms | Allocations: 46895)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-11-16 19:08:02 +0300
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1310)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1374)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1616)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= render @user %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this user", edit_user_path(@user) %> |
+  
+app/views/users/show.html.erb:3
+Started POST "/users?name=dowr2&email=dowr.atayew@mail.ru&login=dowr2111" for 127.0.0.1 at 2021-11-16 19:09:32 +0300
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"dowr2", "email"=>"dowr.atayew@mail.ru", "login"=>"dowr2111"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", nil], ["email", nil], ["login", nil], ["created_at", "2021-11-16 16:09:32.110499"], ["updated_at", "2021-11-16 16:09:32.110499"]]
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 5)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendering layout layouts/mailer.text.erb
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+  Rendered layout layouts/mailer.text.erb (Duration: 0.2ms | Allocations: 76)
+UserMailer#welcome_email: processed outbound mail in 3.3ms
+Delivered mail 6193d7bc2058f_367f3804-148@dowr-ZenBook-UX481FL-UX481FL.mail (2.3ms)
+Date: Tue, 16 Nov 2021 19:09:32 +0300
+From: notifications@example.com
+Message-ID: <6193d7bc2058f_367f3804-148@dowr-ZenBook-UX481FL-UX481FL.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6193d7bc1fcd9_367f3804-263";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6193d7bc1fcd9_367f3804-263
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, 
+===============================================
+
+You have successfully signed up to example.com,
+your username is: .
+
+To login to the site, just follow this link: http://example.com/login.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_6193d7bc1fcd9_367f3804-263
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Welcome to example.com, </h1>
+<p>
+  You have successfully signed up to example.com,
+  your username is: .<br>
+</p>
+<p>
+  To login to the site, just follow this link: http://example.com/login.
+</p>
+<p>Thanks for joining and have a great day!</p>
+</body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_6193d7bc1fcd9_367f3804-263--
+
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 25ms (ActiveRecord: 15.7ms | Allocations: 12382)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-11-16 19:09:32 +0300
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1104)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1168)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1410)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= render @user %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this user", edit_user_path(@user) %> |
+  
+app/views/users/show.html.erb:3
+Started POST "/users?name=dowr2&email=dowr.atayew@mail.ru&login=dowr2111" for 127.0.0.1 at 2021-11-16 19:10:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"dowr2", "email"=>"dowr.atayew@mail.ru", "login"=>"dowr2111"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", nil], ["email", nil], ["login", nil], ["created_at", "2021-11-16 16:10:03.718867"], ["updated_at", "2021-11-16 16:10:03.718867"]]
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:10:in `block in create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 7f246427-2356-4ad3-b18a-0445b2816b01) to Async(default) with arguments: "UserMailer", "welcome_email", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007f32acfe2500 @uri=#<URI::GID gid://mailer/User/4>>}, :args=>[]}
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 35ms (ActiveRecord: 5.7ms | Allocations: 37335)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01] Performing ActionMailer::MailDeliveryJob (Job ID: 7f246427-2356-4ad3-b18a-0445b2816b01) from Async(default) enqueued at 2021-11-16T16:10:03Z with arguments: "UserMailer", "welcome_email", "deliver_now", {:params=>{:user=>#<GlobalID:0x0000563276f7ee88 @uri=#<URI::GID gid://mailer/User/4>>}, :args=>[]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.9ms | Allocations: 378)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01]   Rendered layout layouts/mailer.html.erb (Duration: 1.7ms | Allocations: 614)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01]   Rendering layout layouts/mailer.text.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01]   Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01]   Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.4ms | Allocations: 161)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01]   Rendered layout layouts/mailer.text.erb (Duration: 0.8ms | Allocations: 357)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01] UserMailer#welcome_email: processed outbound mail in 8.5ms
+Started GET "/users/4" for 127.0.0.1 at 2021-11-16 19:10:03 +0300
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01] Delivered mail 6193d7dbbaac1_37025c9414588@dowr-ZenBook-UX481FL-UX481FL.mail (4.4ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01] Date: Tue, 16 Nov 2021 19:10:03 +0300
+From: notifications@example.com
+Message-ID: <6193d7dbbaac1_37025c9414588@dowr-ZenBook-UX481FL-UX481FL.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6193d7dbb9ada_37025c94144ef";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6193d7dbb9ada_37025c94144ef
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, 
+===============================================
+
+You have successfully signed up to example.com,
+your username is: .
+
+To login to the site, just follow this link: http://example.com/login.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_6193d7dbb9ada_37025c94144ef
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Welcome to example.com, </h1>
+<p>
+  You have successfully signed up to example.com,
+  your username is: .<br>
+</p>
+<p>
+  To login to the site, just follow this link: http://example.com/login.
+</p>
+<p>Thanks for joining and have a great day!</p>
+</body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_6193d7dbb9ada_37025c94144ef--
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [7f246427-2356-4ad3-b18a-0445b2816b01] Performed ActionMailer::MailDeliveryJob (Job ID: 7f246427-2356-4ad3-b18a-0445b2816b01) from Async(default) in 19.95ms
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 2123)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2188)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2958)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= render @user %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this user", edit_user_path(@user) %> |
+  
+app/views/users/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users?name=dowr2&email=dowr.atayew@mail.ru&login=dowr2111" for 127.0.0.1 at 2021-11-16 19:18:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"dowr2", "email"=>"dowr.atayew@mail.ru", "login"=>"dowr2111"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "dowr2"], ["email", "dowr.atayew@mail.ru"], ["login", "dowr2111"], ["created_at", "2021-11-16 16:18:55.282495"], ["updated_at", "2021-11-16 16:18:55.282495"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 49acb83a-4b97-4df5-a9cf-0d9a82b80529) to Async(default) with arguments: "UserMailer", "welcome_email", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007f3fbcf6c8d8 @uri=#<URI::GID gid://mailer/User/5>>}, :args=>[]}
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 35ms (ActiveRecord: 5.6ms | Allocations: 37041)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529] Performing ActionMailer::MailDeliveryJob (Job ID: 49acb83a-4b97-4df5-a9cf-0d9a82b80529) from Async(default) enqueued at 2021-11-16T16:18:55Z with arguments: "UserMailer", "welcome_email", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007f3f9404fa30 @uri=#<URI::GID gid://mailer/User/5>>}, :args=>[]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.8ms | Allocations: 382)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529]   Rendered layout layouts/mailer.html.erb (Duration: 1.9ms | Allocations: 618)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529]   Rendering layout layouts/mailer.text.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529]   Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529]   Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.4ms | Allocations: 161)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529]   Rendered layout layouts/mailer.text.erb (Duration: 2.4ms | Allocations: 3502)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529] UserMailer#welcome_email: processed outbound mail in 11.1ms
+Started GET "/users/5" for 127.0.0.1 at 2021-11-16 19:18:55 +0300
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529] Delivered mail 6193d9ef5064e_380e5c6c882e@dowr-ZenBook-UX481FL-UX481FL.mail (3.9ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529] Date: Tue, 16 Nov 2021 19:18:55 +0300
+From: notifications@example.com
+To: dowr.atayew@mail.ru
+Message-ID: <6193d9ef5064e_380e5c6c882e@dowr-ZenBook-UX481FL-UX481FL.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6193d9ef4fc87_380e5c6c87c7";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6193d9ef4fc87_380e5c6c87c7
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome to example.com, dowr2
+===============================================
+
+You have successfully signed up to example.com,
+your username is: dowr2111.
+
+To login to the site, just follow this link: http://example.com/login.
+
+Thanks for joining and have a great day!
+
+----==_mimepart_6193d9ef4fc87_380e5c6c87c7
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Welcome to example.com, dowr2</h1>
+<p>
+  You have successfully signed up to example.com,
+  your username is: dowr2111.<br>
+</p>
+<p>
+  To login to the site, just follow this link: http://example.com/login.
+</p>
+<p>Thanks for joining and have a great day!</p>
+</body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_6193d9ef4fc87_380e5c6c87c7--
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [49acb83a-4b97-4df5-a9cf-0d9a82b80529] Performed ActionMailer::MailDeliveryJob (Job ID: 49acb83a-4b97-4df5-a9cf-0d9a82b80529) from Async(default) in 21.06ms
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2143)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2208)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2978)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= render @user %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this user", edit_user_path(@user) %> |
+  
+app/views/users/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m

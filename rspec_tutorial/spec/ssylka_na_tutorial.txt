@@ -1,0 +1,4 @@
+https://coderlessons.com/tutorials/kachestvo-programmnogo-obespecheniia/uznaite-rspec/rspec-kratkoe-rukovodstvo
+
+1. тестируемый файл должен быть с _spec.rb
+2. терминал -> rspec spec hello_world_spec.rb

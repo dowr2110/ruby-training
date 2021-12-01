@@ -1,0 +1,14 @@
+[0;1;32m●[0m redis-server.service - Advanced key-value store
+     Loaded: loaded (/lib/systemd/system/redis-server.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Wed 2021-12-01 16:24:18 +03; 1h 45min left
+       Docs: http://redis.io/documentation,
+             man:redis-server(1)
+   Main PID: 1011 (redis-server)
+      Tasks: 4 (limit: 18887)
+     Memory: 4.8M
+     CGroup: /system.slice/redis-server.service
+             └─1011 /usr/bin/redis-server 127.0.0.1:6379
+
+сне 01 16:24:18 dowr-ZenBook-UX481FL-UX481FL systemd[1]: Starting Advanced key-value store...
+сне 01 16:24:18 dowr-ZenBook-UX481FL-UX481FL systemd[1]: redis-server.service: Can't open PID file /run/redis/redis-server.pid (yet?) after start: Operation not permitted
+сне 01 16:24:18 dowr-ZenBook-UX481FL-UX481FL systemd[1]: Started Advanced key-value store.

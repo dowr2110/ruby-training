@@ -1,2 +1,0 @@
-bundler: command not found: /usr/local/bin/sidekiq-client
-Install missing gem executables with `bundle install`
